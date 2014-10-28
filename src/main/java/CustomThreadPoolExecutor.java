@@ -24,7 +24,7 @@ public class CustomThreadPoolExecutor extends ThreadPoolExecutor implements Exec
             @Override
             public void rejectedExecution(Runnable r,
                     ThreadPoolExecutor executor) {
-                LOG.error("ANTOINE : Task rejected");
+                LOG.error("Task rejected");
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
