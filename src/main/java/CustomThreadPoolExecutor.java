@@ -36,7 +36,7 @@ public class CustomThreadPoolExecutor extends ThreadPoolExecutor implements Exec
     }
 
     protected void beforeExecute(Thread t, Runnable r) {
-        //LOG.info("{} beforeExecute", t.getName());
+        LOG.info("{} beforeExecute", t.getName());
         super.beforeExecute(t, r);
     }
 
@@ -44,7 +44,7 @@ public class CustomThreadPoolExecutor extends ThreadPoolExecutor implements Exec
         if (t != null) {
             LOG.error("t={}", t);
         }
-        //LOG.info("{} afterExecute", r);
+        LOG.info("{} afterExecute", r);
         super.afterExecute(r, t);
     }
 }
